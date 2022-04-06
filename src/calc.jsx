@@ -32,7 +32,7 @@ const Calc = () => {
 
         Так-что я не знаю правильный ли код ниже(Под правильностью я имею в виду - что это не говно код)
         */
-        if (currentValue === 'Infinity' || currentValue === 'NaN') {
+        if (currentValue === 'Infinity' || currentValue === 'NaN' || currentValue === '-Infinity') {
             setCurrentValue('0')
         }
         refValue.current.innerHTML = currentValue !== 'Infinity' || currentValue === 'NaN' || currentValue === '-Infinity' ? currentValue : '0'
