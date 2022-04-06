@@ -35,7 +35,7 @@ const Calc = () => {
         if (currentValue === 'Infinity' || currentValue === 'NaN') {
             setCurrentValue('0')
         }
-        refValue.current.innerHTML = currentValue !== 'Infinity' || currentValue === 'NaN' || currentValue !== '-Infinity' ? currentValue : '0'
+        refValue.current.innerHTML = currentValue !== 'Infinity' || currentValue === 'NaN' || currentValue === '-Infinity' ? currentValue : '0'
         refValue.current.innerHTML = currentValue
         refPastValue.current.innerHTML = pastValue
         refMark.current.innerHTML = mark
