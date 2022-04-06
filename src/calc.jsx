@@ -198,26 +198,50 @@ const Calc = () => {
         const number = (n) => Math.abs(Number(n))
 
         if (mark !== '' && currentValue === '0') {
+            if (pastValue > 0){
             fullFillNumbers(Math.sqrt(number(pastValue)))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else {
+                setMark('')
+                setPastValue('')
+                setCurrentValue('0')
+            }
         } else {
+            if (currentValue > 0){
             fullFillNumbers(Math.sqrt(number(currentValue)))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else {
+                setMark('')
+                setPastValue('')
+                setCurrentValue('0')
+            }
         }
     }
     const degreeTenX = () => {
         const number = (n) => Number(n)
 
         if (mark !== '' && currentValue === '0') {
+            if (pastValue >= 0){
             fullFillNumbers(10 ** number(pastValue))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else{
+                setMark('')
+                setPastValue('')
+                setPastValue('')
+            }
         } else {
+            if (currentValue >= 0){
             fullFillNumbers(10 ** number(currentValue))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else{
+                setMark('')
+                setPastValue('')
+                setCurrentValue('0')
+            }
         }
     }
 
@@ -225,13 +249,25 @@ const Calc = () => {
         const number = (n) => Math.abs(Number(n))
 
         if (mark !== '' && currentValue === '0') {
+            if(pastValue > 0){
             fullFillNumbers(Math.log(number(pastValue)) / Math.log(10))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else {
+                setMark('')
+                setCurrentValue('0')
+                setPastValue('')
+            }
         } else {
+            if(currentValue > 0){
             fullFillNumbers(Math.log(number(currentValue)) / Math.log(10))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else{
+                setMark('')
+                setPastValue('')
+                setCurrentValue('0')
+            }
         }
     }
 
@@ -239,13 +275,25 @@ const Calc = () => {
         const number = (n) => Math.abs(Number(n))
 
         if (mark !== '' && currentValue === '0') {
+            if(pastValue > 0){
             fullFillNumbers(Math.log(number(pastValue)))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else {
+                setMark('')
+                setPastValue('')
+                setCurrentValue('0')
+            }
         } else {
+            if (currentValue > 0) {
             fullFillNumbers(Math.log(number(currentValue)))
             setMark('')
-            setPastValue('')
+            setPastValue('')}
+            else {
+                setMark('')
+                setPastValue('')
+                setCurrentValue('0')
+            }
         }
     }
 
